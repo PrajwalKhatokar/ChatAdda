@@ -1,7 +1,7 @@
 const API_URL = "/api/chat";
 const REQUEST_TIMEOUT_MS = 25000;
-const CHAT_STORAGE_KEY = "chatadda_chats_v1";
-const CURRENT_CHAT_KEY = "chatadda_current_chat_v1";
+const CHAT_STORAGE_KEY = "pavniadda_chats_v1";
+const CURRENT_CHAT_KEY = "pavniadda_current_chat_v1";
 
 const chat = document.getElementById("chat");
 const main = document.querySelector(".main");
