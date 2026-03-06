@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatAdda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">ChatAdda</div>
+        <button id="new-chat-btn" class="side-action" type="button">+ New chat</button>
+        <div class="side-section">Recent</div>
+        <ul id="chat-history" class="side-list"></ul>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="top-title">ChatAdda <span>Auto</span></div>
+        </header>
+
+        <section id="empty-state" class="empty-state">
+          <h1>What's on your agenda today?</h1>
+        </section>
+
+        <section id="chat" class="chat-area" aria-live="polite"></section>
+
+        <form id="chat-form" class="composer">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Ask anything"
+            autocomplete="off"
+            required
+          />
+          <button id="send-btn" type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
