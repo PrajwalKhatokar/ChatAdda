@@ -28,4 +28,12 @@ if (!apiSource.includes("process.env.HUGGINGFACE_TOKEN")) {
   throw new Error("Serverless route must use HUGGINGFACE_TOKEN env var.");
 }
 
-console.log("Build validation passed: production-safe API routing and file checks are valid.");
+const outDir = "public";
+fs.mkdirSync(outDir, { recursive: true });
+fs.copyFileSync("index.html", path.join(outDir, "index.html"));
+fs.copyFileSync("style.css", path.join(outDir, "style.css"));
+fs.copyFileSync("script.js", path.join(outDir, "script.js"));
+
+console.log(
+  "Build validation passed and public/ output generated for Vercel deployment."
+);
